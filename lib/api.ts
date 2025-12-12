@@ -6,6 +6,7 @@ import type { Note, NoteFormValues } from "@/types/note";
 interface FetchNotesResponse {
   notes: Note[];
   totalPages: number;
+  tag?: string;
 }
 
 export async function fetchNotes(

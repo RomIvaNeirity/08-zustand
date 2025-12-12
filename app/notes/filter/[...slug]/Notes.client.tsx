@@ -10,6 +10,7 @@ import { fetchNotes } from "@/lib/api";
 import NoteList from "@/components/NoteList/NoteList";
 import type { Note } from "@/types/note";
 import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
 
 import SearchBox from "@/components/SearchBox/SearchBox";
 import Pagination from "@/components/Pagination/Pagination";
@@ -54,7 +55,6 @@ export default function NotesClient({ tag }: NotesClientProps) {
     <div className={css.app}>
       <div className={css.toolbar}>
         <SearchBox onChange={setSearch} />
-
         {data && data.totalPages > 1 && (
           <Pagination
             pageCount={data.totalPages}
@@ -62,10 +62,9 @@ export default function NotesClient({ tag }: NotesClientProps) {
             onPageChange={setCurrentPage}
           />
         )}
-
-        <button className={css.button} onClick={() => setModalOpen(true)}>
+        <Link href="/notes/action/create" className={css.createNoteLink}>
           Create note +
-        </button>
+        </Link>
 
         {modalOpen && (
           <Modal onClose={() => setModalOpen(false)}>

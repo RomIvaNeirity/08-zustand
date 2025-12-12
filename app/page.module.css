@@ -41,7 +41,8 @@
   border-bottom: 1px solid #dee2e6;
 }
 
-.button {
+.button,
+.createNoteLink {
   padding: 6px 12px;
   font-size: 16px;
   color: #fff;
@@ -52,6 +53,13 @@
   transition: background-color 0.2s ease;
 }
 
-.button:hover {
+.button:hover,
+.createNoteLink:hover {
   background-color: #0b5ed7;
+}
+
+.createNoteLink {
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
 }
