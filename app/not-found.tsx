@@ -1,14 +1,16 @@
+// app/not-found.tsx
+
 import { Metadata } from "next";
 import Link from "next/link";
 import css from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Page not found — 404 | NoteHub",
-  description: "TThis page does not exist or has been deleted.",
+  description: "This page does not exist or has been deleted.",
   openGraph: {
     title: "Page not found — 404",
     description: "This page does not exist or has been deleted.",
-    url: "https://your-domain.com",
+    url: "https://08-zustand-kohl-rho.vercel.app/",
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
